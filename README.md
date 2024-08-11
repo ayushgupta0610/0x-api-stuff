@@ -45,15 +45,17 @@ This boilerplate aims to:
 
 ### Video Demo
 
-For a visual guide, watch the [video demo](https://github.com/user-attachments/assets/b1698dac-d582-45a0-8d61-31131732b74e) to see the setup and running of the project.
+Swap Tokens with 0x api
+
+1. Token allowance (on 0xdef1c0ded9bec7f1a1670819833240f027b25eff)
+2. Fetch Quote
+3. Sign Transaction
 
 ### Step-by-Step Guide
 
 #### Step 1: 🚀 Initial Setup
 
-- Clone the repository: `git clone https://github.com/edwinhern/express-typescript-2024.git`
-- Navigate: `cd express-typescript-2024`
-- Install dependencies: `npm ci`
+
 
 #### Step 2: ⚙️ Environment Configuration
 
@@ -65,9 +67,3 @@ For a visual guide, watch the [video demo](https://github.com/user-attachments/a
 - Development Mode: `npm run dev`
 - Building: `npm run build`
 - Production Mode: Set `.env` to `NODE_ENV="production"` then `npm run build && npm run start`
-
-## 🤝 Feedback and Contributions
-
-We'd love to hear your feedback and suggestions for further improvements. Feel free to contribute and join us in making backend development cleaner and faster!
-
-🎉 Happy coding!
