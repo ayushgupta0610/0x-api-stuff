@@ -4,7 +4,7 @@ import axios from 'axios';
 dotenv.config();
 
 const walletAddress = '0x804EB4b94F7765c815cff8d3019a7380F0A3A24f'; // Replace with the actual wallet address
-const headers = {"0x-api-key": "d0b0332b-302a-4740-8626-ca900fcbcebe"}; // Get your live API key from the 0x Dashboard (https://dashboard.0x.org/apps)
+const headers = {"0x-api-key": `${process.env.ZEROX_API_KEY}`}; // Get your live API key from the 0x Dashboard (https://dashboard.0x.org/apps)
 
 const params = {
     sellToken: '0xAfb89a09D82FBDE58f18Ac6437B3fC81724e4dF6', // DOG
@@ -22,7 +22,7 @@ async function getQuoteOfSwap(sellToken: string, buyToken: string, sellAmount: s
             takerAddress,
         };
         const response = await axios.get(
-            `https://base.api.0x.org/swap/v1/quote`, { headers, params }
+            "https://base.api.0x.org/swap/v1/quote", { headers, params }
         );
         console.log("response.data: ", response.data);
         return response.data;
@@ -56,7 +56,6 @@ async function main() {
     } catch (error) {
         console.error('Failed to fetch wallet assets:', error);
     }
-
 }
 
 main();

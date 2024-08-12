@@ -29,7 +29,7 @@ export async function fetchWalletAssets(walletAddress: string): Promise<Asset[]>
     const response = await axios.get<ZerionResponse>(`${ZERION_API_URL}/${walletAddress}/positions/`, {
       headers: {
         'accept': 'application/json',
-        'authorization': `Basic ${Buffer.from(ZERION_API_KEY + ':').toString('base64')}`
+        'authorization': `Basic ${Buffer.from(`${ZERION_API_KEY}:`).toString('base64')}`
       },
       params: {
         'currency': 'usd',
